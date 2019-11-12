@@ -1,0 +1,96 @@
+ <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form name="form" (ngSubmit)="onSubmit(EmployeeForm)" #EmployeeForm="ngForm">
+<!-- 
+                <div class="form-group">
+                <select class="form-control" id="NumDevelopers" ngModel name="NumDevelopers" #NumDevelopersControl="ngModel" required>
+                    <option value="">Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                </div>
+
+                       
+            <div *ngIf="NumDevelopersControl.touched && NumDevelopersControl.invalid">
+                <p class="FirstName">Number of developers is required</p>
+            </div> -->
+<!-- 
+                <div class="form-group">
+                        <div class="col-xs-12 col-12 col-md-4 form-group">
+                                <input type="text" placeholder="Datepicker" 
+                                class="form-control" bsDatepicker [minDate]="minDate" 
+                                #DateControl="ngModel" ngModel name="StartDate" required>
+                         </div>
+                </div>
+       
+            <div *ngIf="DateControl.touched && DateControl.invalid">
+                <p class="FirstName">Date is required</p>
+            </div> -->
+
+            <div class="form-group">
+                <label><strong>Enter Your Name: </strong></label>
+                <input type="text" class="form-control" ngModel name="Name" #NameControl="ngModel" required>
+            </div>
+
+            
+            <div *ngIf="NameControl.pristine"> <!--Opposite is Dirty-->
+                <p>Name Control is Pristine</p>
+            </div>
+
+            <div *ngIf="NameControl.untouched"> <!--Opposite is Untouched-->
+                <p>Name Control has been Untouched</p>
+            </div>
+
+            <div *ngIf="NameControl.invalid">  <!--Opposite is Valid-->
+                <p>Name Control is Required</p>
+            </div>
+
+            <div *ngIf="NameControl.touched">
+                <p>Name Control has been Touched</p>
+            </div>
+
+            <div *ngIf="NameControl.dirty">
+                <p>Name Control has been Dirty</p>
+            </div>
+
+                
+            <div *ngIf="NameControl.valid">
+                <p>Name Control is Valid</p>
+            </div>
+
+            <div class="form-group">
+                <label><strong>Enter Your Technology: </strong></label>
+                <input type="text" class="form-control" ngModel name="Technology" #TechnologyControl="ngModel" required>
+            </div>
+
+            
+            <div class="form-group">
+                    <label><strong>Enter Your Age: </strong></label>
+                    <input type="number" class="form-control" ngModel name="Age" #AgeControl="ngModel" required>
+            </div>
+
+            
+
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </form>
+
+            <div *ngIf="ShowData else NoContent">
+            <h5>Employee Name: {{EmployeeName}}</h5>
+            <h5>Employee Technology: {{EmployeeTechnology}}</h5>
+            <h5>Employee Age: {{EmployeeAge}}</h5>
+            </div>
+
+            <ng-template #NoContent>
+                <h5>No Employee Detials available yet, Fill the form to get the Details</h5>
+            </ng-template>
+
+        </div>
+    </div>
+</div>

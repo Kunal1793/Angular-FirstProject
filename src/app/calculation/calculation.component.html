@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>Calculator Application</h3>
+<input type="number" [(ngModel)] = "input1" class="form-control" placeholder="Enter First Number"><br><br>
+<input type="number" [(ngModel)] = "input2" class="form-control" placeholder="Enter Second Number"><br><br>
+<button (click)="AddNumbers(input1, input2)" class="btn btn-primary">Add</button><br><br>
+<button (click)="SubtractNumbers(input1, input2)" class="btn btn-primary">Subtract</button><br><br>
+<button (click)="MultiplyNumbers(input1, input2)" class="btn btn-primary">Multiply</button><br><br>
+<button (click)="DivideNumbers(input1, input2)" class="btn btn-primary">Division</button><br><br>
+
+
+<h4>The Addition of Two Numbers: {{Add}}</h4>
+<br>
+<h4>The Subtraction of Two Numbers: {{Subtract}}</h4>
+<br>
+
+<h4>The Multiplication of Two Numbers: {{Multiply}}</h4>
+<br>
+
+<h4>The Division of Two Numbers: {{Divide}}</h4>
+<br>
+
+
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+<h4>Example of Structural Diective - NgFor</h4>
+<div *ngFor="let Fruit of Fruits">
+    <ul>
+        <li>{{Fruit}}</li>
+    </ul>
+</div>
+
+<hr>
+<h4>Example of Event Binding</h4>
+<button (click)="EventMethod()" class="btn btn-primary">Magic</button>
+
+<hr>
+<h4>Example of Structural Directive - NgIf</h4>
+<div *ngIf="ShowMessage else NoContent">
+    <p>This message is displayed because of Event Binding and Structral directive NgIf</p>
+</div>
+<hr>
+
+<ng-template #NoContent>
+<p>Click Magic Button to Trigger 2 things-- Event binding and Structral directive NgIf</p>
+<p>This message is getting displayed becuase of Template refrence varibale</p>
+</ng-template>
+<h4>Example of String Interpolation</h4>
+<p>{{Name}}</p>
+<p>{{Myname}}</p>
+<hr>
+<input type="text" [(ngModel)]="Myname" class="form-control">
+</div>
+

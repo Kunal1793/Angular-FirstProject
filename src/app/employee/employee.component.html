@@ -1,0 +1,18 @@
+<div *ngFor="let Employee of CompaniesEmployees">
+    <ul>
+        <li>ID: {{Employee.id}}</li>
+        <li>NAME: {{Employee.employee_name}}</li>
+        <li>SALARY: {{Employee.employee_salary}}</li>
+        <li>AGE: {{Employee.employee_age}}</li>
+    </ul>
+
+</div>
+
+<button (click)="ShowEmployees()">Display</button>
+<div *ngIf="isLoggedIn; else loggedOut">
+    Welcome back, friend.
+  </div>
+  
+  <ng-template #loggedOut>
+    Please friend, login.
+  </ng-template>
